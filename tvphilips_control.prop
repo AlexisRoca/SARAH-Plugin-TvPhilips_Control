@@ -1,0 +1,9 @@
+{
+  "modules": { 
+    "tvphilips_control": {
+      "description": "Controle de la television",
+      "version": "1.0",
+      "ip": "192.168.0.10"
+      }
+  }
+}

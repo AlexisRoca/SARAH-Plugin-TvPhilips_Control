@@ -1,0 +1,95 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleDemo" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="ruleDemo" scope="public">
+    <example>affiche la xbox one sur la television</example>
+    <tag>out.action=new Object(); </tag>
+ 
+    <one-of>
+
+      <item>
+        Merci ça sera tout, SARAH
+        <tag>out.action._attributes.context = "default"</tag>
+        <tag>out.action.command = "modeSARAH"</tag>
+      </item>
+
+
+
+
+      <item>eteint la television<tag>out.action.command="Standby"</tag></item>
+
+
+    
+      <item>active ambi light<tag>out.action.command="AmbilightOnOff"</tag></item>
+      <item>désactive ambi light<tag>out.action.command="AmbilightOnOff"</tag></item>                  
+
+
+
+      <item>monte le volume<tag> out.action.command="VolumeUp"; </tag></item>
+      <item>baisse le volume<tag> out.action.command="VolumeDown"; </tag></item>
+      <item>monte le son <tag> out.action.command="VolumeUp"; </tag></item>
+      <item>baisse le son <tag> out.action.command="VolumeDown"; </tag></item>           
+      <item>met le son a zero<tag>out.action.command=0</tag></item>
+      <item>met le son a dix<tag>out.action.command=10</tag></item>
+      <item>met le son a vingt<tag>out.action.command=20</tag></item>
+      <item>met le son a trente<tag>out.action.command=30</tag></item>
+      <item>coupe le son<tag>out.action.command="true"</tag></item>
+      <item>remet le son<tag>out.action.command="false"</tag></item>
+
+
+
+      <item>affiche la x box trois cent soixante<tag>out.action.command="hdmi1"</tag></item>
+      <item>met la x box trois cent soixante<tag>out.action.command="hdmi1"</tag></item>
+      <item>remet la x box trois cent soixante<tag>out.action.command="hdmi1"</tag></item>
+      <item>affiche la x box ouane<tag>out.action.command="hdmi2"</tag></item>
+      <item>met la x box ouane<tag>out.action.command="hdmi2"</tag></item>
+      <item>remet la x box ouane<tag>out.action.command="hdmi2"</tag></item>
+      <item>affiche la yoga<tag>out.action.command="hdmi3"</tag></item>
+      <item>met la yoga<tag>out.action.command="hdmi3"</tag></item> 
+      <item>remet la yoga<tag>out.action.command="hdmi3"</tag></item> 
+      <item>affiche la télé<tag>out.action.command="tv"</tag></item>
+      <item>met la télé<tag>out.action.command="tv"</tag></item> 
+      <item>remet la télé<tag>out.action.command="tv"</tag></item> 
+
+
+
+      <item>met T F un <tag> out.action.command="Digit1"; </tag></item>
+      <item>met France deux <tag> out.action.command="Digit2"; </tag></item>
+      <item>met France trois <tag> out.action.command="Digit3"; </tag></item>
+      <item>met Canal plus<tag> out.action.command="Digit4"; </tag></item>
+      <item>met France cinq <tag> out.action.command="Digit5"; </tag></item>
+      <item>met aime six <tag> out.action.command="Digit6"; </tag></item>
+      <item>met Arté <tag> out.action.command="Digit7"; </tag></item>
+      <item>met des huit <tag> out.action.command="Digit8"; </tag></item>
+      <item>met W neuf <tag> out.action.command="Digit9"; </tag></item>
+
+
+
+      <item>retour<tag>out.action.command="Back"</tag></item>
+      <item>home<tag>out.action.command="Home"</tag></item>
+      <item>option<tag>out.action.command="Options"</tag></item>    
+      <item>info<tag>out.action.command="Info"</tag></item>
+      <item>monte<tag>out.action.command="CursorUp"</tag></item>
+      <item>descend<tag>out.action.command="CursorDown"</tag></item>
+      <item>droite<tag>out.action.command="CursorRight"</tag></item>
+      <item>gauche<tag>out.action.command="CursorLeft"</tag></item>
+      <item>ok<tag>out.action.command="Confirm"</tag></item>
+      <item>suivant<tag>out.action.command="Adjust"</tag></item>
+      <item>Adjust<tag>out.action.command="Back"</tag></item>
+      <item>chaine suivante<tag>out.action.command="ChannelStepUp"</tag></item>
+      <item>chaine précedente<tag>out.action.command="ChannelStepDown"</tag></item>
+      <item>sous titres<tag>out.action.command="Subtitle"</tag></item>
+      <item>sources<tag>out.action.command="Source"</tag></item>
+      <item>play<tag>out.action.command="PlayPause"</tag></item>
+      <item>pause<tag>out.action.command="PlayPause"</tag></item>
+      <item>avance rapide<tag>out.action.command="FastForward"</tag></item>
+      <item>retour rapide<tag>out.action.command="FastForward"</tag></item>
+      <item>stop<tag>out.action.command="Stop"</tag></item>
+      <item>enregistrer<tag>out.action.command="Record"</tag></item>
+      <item>online<tag>out.action.command="Online"</tag></item>
+
+
+
+    </one-of>
+
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/tvphilips_control";</tag>
+  </rule> 
+</grammar> 

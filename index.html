@@ -1,0 +1,70 @@
+<div id="TvPhilips_Control">
+
+  <div class="row-fluid">
+    <div class="span11">
+      <p>Le plugin <b>TvPhilips_Control</b> permet de controler totalement sa télévision Philips</p>
+      <p>L'ip de la télévision est à placé dans le fichier .prop<i>TvPhilips_Control.prop</i> :</p>
+      <pre>
+{
+  "modules": { 
+    "TvPhilips_Control": {
+      "description": "Controle des televisions Philips",
+      "version": "1.0",
+      "ip": "192.168.x.x"
+    }
+  }
+}
+      </pre>
+      <p>Explication du pluggin:</p>
+      <p>J'ai ajouté un mode Télévision pour controler la télé sans à avoir à dire SARAH avant chaque commande <code>Attention à bien articuler le premier mot de la commande</code></p>      
+      <p>Pour l'activer il faut dire  <i>TvPhilips_Control.xml</i> :
+        <ul>
+          <li><i>Sarah, active le mode television</i></li>
+        </ul>
+      </p>
+      <p>Et pour en sortir<i>TvPhilips_Control.xml</i> :
+        <ul>
+          <li><i>Merci ce sera tout Sarah</i></li>
+        </ul>
+      </p>
+      <br>
+      <p>Dans le fichier XML il faut ajouter les appareils qui sont branché à votre télévision ainsi que leur port sur lequel il sont branchés</p> 
+      <p>Exemple:</p>
+      <pre>
+&lt;item&gt;affiche la x box trois cent soixante&lt;tag&gt;out.action.command=&quot;hdmi1&quot;&lt;/tag&gt;&lt;/item&gt;
+&lt;item&gt;met la x box trois cent soixante&lt;tag&gt;out.action.command=&quot;hdmi1&quot;&lt;/tag&gt;&lt;/item&gt;
+&lt;item&gt;remet la x box trois cent soixante&lt;tag&gt;out.action.command=&quot;hdmi1&quot;&lt;/tag&gt;&lt;/item&gt;
+&lt;item&gt;affiche la x box ouane&lt;tag&gt;out.action.command=&quot;hdmi2&quot;&lt;/tag&gt;&lt;/item&gt;
+&lt;item&gt;met la x box ouane&lt;tag&gt;out.action.command=&quot;hdmi2&quot;&lt;/tag&gt;&lt;/item&gt;
+&lt;item&gt;remet la x box ouane&lt;tag&gt;out.action.command=&quot;hdmi2&quot;&lt;/tag&gt;&lt;/item&gt;
+&lt;item&gt;affiche la yoga&lt;tag&gt;out.action.command=&quot;hdmi3&quot;&lt;/tag&gt;&lt;/item&gt;
+&lt;item&gt;met la yoga&lt;tag&gt;out.action.command=&quot;hdmi3&quot;&lt;/tag&gt;&lt;/item&gt; 
+&lt;item&gt;remet la yoga&lt;tag&gt;out.action.command=&quot;hdmi3&quot;&lt;/tag&gt;&lt;/item&gt; 
+&lt;item&gt;affiche la télé&lt;tag&gt;out.action.command=&quot;tv&quot;&lt;/tag&gt;&lt;/item&gt;
+&lt;item&gt;met la télé&lt;tag&gt;out.action.command=&quot;tv&quot;&lt;/tag&gt;&lt;/item&gt; 
+&lt;item&gt;remet la télé&lt;tag&gt;out.action.command=&quot;tv&quot;&lt;/tag&gt;&lt;/item&gt; 
+      </pre>
+      <p>on place son appareil dans la phrase à dire et son port dans la variable commande</p>
+      <p>Voici la liste des sources</p>
+      <pre> 
+tv
+satellite
+hdmi1
+hdmi2
+hdmi3
+hdmiside
+ext1
+ext2
+ypbpr
+vga
+      </pre>    
+      <br>
+      <p>Malheureusement je n'ai pas réussi  à trouver de solution pour les chaines à nombre (exemple pour aller sur TMC - chaine numero 10)</p>
+      <br> 
+      <p>Pour les intéressé, l'api des télévision philips se trouve sur à l'adresse de votre télévision sur le port 1925 (exemple: 192.168.0.1:1925)</p>
+      <br> 
+      <p>Je remercie Jerome Veyret pour ses conseils et encouragements ainsi que Irhon Dril pour sa version du plugin de controle des télé philips (travail dont je me suis fortement inspiré! Et bien entendu Jean-Philippe Encausse pour son travail sur S.A.R.A.H (espece de tueur de dimanche =P).</p>      
+    </div>
+  </div>
+
+</div>
